@@ -1,0 +1,26 @@
+
+<div class="flyerContainer overflow">
+	{{#storeInfo.regularFlyer}}
+	<div class="media list-group-item" data-per="{{bestPercent}}" data-sav="{{bestSav}}" data-reg="{{@index}}" data-categ="{{category}}">
+		<a class="pull-left">
+			<img height="100" width="100" class="media-object img-item" src="{{url}}" alt="{{item}}"></img>
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">{{item}}</h4>
+			<div class="row">
+				<div class="list-group-item col-xs-4">
+					<h5>Price: </h5>{{price}} 
+				</div>
+				<div class="list-group-item col-xs-4">
+					<h5>Savings: </h5>{{savings}} 
+				</div>
+				<div class="list-group-item col-xs-4">
+					<h5>Best Percentage: </h5>{{bestPercent}}% 
+				</div>
+			</div>
+			<div><h5>Description: </h5>{{description}}
+			</div>
+		</div>
+	</div>
+	{{/storeInfo.regularFlyer}}
+</div>

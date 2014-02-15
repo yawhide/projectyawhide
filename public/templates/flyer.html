@@ -1,0 +1,58 @@
+	<!-- Page content -->
+
+<div class="row">
+	<div class="col-xs-3">
+		<div class="list-group fixedLeft">
+			<h4>Flyer Types</h4>
+			<a class="list-group-item list-small active" data-toggle="true" id="regFly">Regular Flyer</a>
+			<a class="list-group-item list-small" data-toggle="false" id="perFly">Best Deal Version</a>
+			<a class="list-group-item list-small" data-toggle="false" id="savFly">Best Savings Version</a>
+			
+			<h4>Flyer Categories</h4>
+			<div class='categToggle'>
+				<a class='list-group-item list-small active' id='categ' data-categ='all'><span class='badge'>{{storeInfo.regularFlyer.length}}</span>All</a>
+				{{#objectLoop storeInfo}}
+				{{/objectLoop}}
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-9">
+		<div class="flyerContainer overflow">
+			{{#storeInfo.regularFlyer}}
+			<div class="media list-group-item media2" data-per="{{bestPercent}}" data-sav="{{bestSav}}" data-price="{{price}}" data-savings="{{savings}}" data-item="{{item}}" data-reg="{{@index}}" data-categ="{{category}}">
+				<a class="pull-left">
+					<img height="100" width="100" class="media-object img-item" src="{{url}}" alt="{{item}}"></img>
+				</a>
+				<div class="media-body">
+					<div class="row">
+						<h4 class="media-heading col-xs-11">{{item}}</h4>
+						<button type="button" class="btn btn-default btn-sm col-xs-1 plus-sign">
+							<span class="glyphicon glyphicon-plus-sign"></span>
+						</button>
+					</div>
+					<div class="row">
+						<div class="list-group-item col-xs-4">
+							<h5>Price: </h5>{{price}} 
+						</div>
+						<div class="list-group-item col-xs-4">
+							<h5>Savings: </h5>{{savings}} 
+						</div>
+						<div class="list-group-item col-xs-4">
+							<h5>Deal Value: </h5>{{bestPercent}}% 
+						</div>
+					</div>
+					<div><h5>Description: </h5>{{description}}
+					</div>
+				</div>
+			</div>
+			{{/storeInfo.regularFlyer}}
+		</div>
+</div>
+
+		
+		
+			
+	
+
+
+
